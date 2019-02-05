@@ -111,6 +111,67 @@
           hodor - hodor hodor hodor. Hodor. Hodor hodor... Hodor hodor hodor hodor hodor? </p>
         <span class='expandButton'></span>
       </div>
+      <div class="article">
+        <h2>Lambda Student Baffled by Mysterious Method Definition Error</h2>
+        <p class="date">February 4th, 2019</p>
+        <p>Lambda student valiantly tried to bind his event listener assignment to his class method 
+          and then define that method as an arrow function. When he inspected his page with Chrome DevTools 
+          he received the following error message:
+        </p>
+        <code>
+          SyntaxError: Unexpected token =
+        </code>
+        <p>
+          Curiously this error message does not appear when the student ported his code to <a href="https://codepen.io/wmemorgan/pen/gqxGGP?editors=0110">CodePen</a> 
+        </p>
+        <p>
+          Thinking this might be related to a rendering issue with Chrome's v8 engine, 
+          he tried to load his page in Firefox and received the following message:
+        </p>
+        <code>
+          SyntaxError: bad method definition
+        </code>
+        <p>Currently the mystery remains unsolved so in the meantime
+          the student has decided to use the <em>old skool</em> approach
+          and explicitly bind the event listener declaration to the class
+          method and use a non-arrow function to define the method:
+        </p>
+        <code>
+          //Old Skool binding
+          this.expandButton.addEventListener('click', this.expandArticle.bind(this))
+        </code>
+        <code>
+          //Non arrow function method definition
+          expandArticle () {
+            this.newArticle.classList.toggle('article-open')
+          }
+        </code>
+        <span class='expandButton'></span>
+      </div>
+      <div class="article">
+        <h2>Lambda Student Drinks Second Cup of Coffee</h2>
+        <p class="date">February 3rd, 2019</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci illo voluptatem quos enim magni 
+          blanditiis mollitia temporibus beatae reprehenderit quisquam sapiente suscipit earum laborum nesciunt corrupti 
+          perferendis assumenda, error quas?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci illo voluptatem quos enim magni 
+          blanditiis mollitia temporibus beatae reprehenderit quisquam sapiente suscipit earum laborum nesciunt corrupti 
+          perferendis assumenda, error quas?</p>
+        <span class="expandButton"></span>
+      </div>
+      <div class="article">
+        <h2>Maroon 5 lead singer sings off key during Superbowl Halftime Show</h2>
+        <p class="date">February 3rd, 2019</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci illo voluptatem quos enim magni
+          blanditiis mollitia temporibus beatae reprehenderit quisquam sapiente suscipit earum laborum nesciunt corrupti
+          perferendis assumenda, error quas?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci illo voluptatem quos enim magni
+          blanditiis mollitia temporibus beatae reprehenderit quisquam sapiente suscipit earum laborum nesciunt corrupti
+          perferendis assumenda, error quas?
+        </p>
+        <span class="expandButton"></span>
+      </div>
     </div>
   </body>
 </html>
